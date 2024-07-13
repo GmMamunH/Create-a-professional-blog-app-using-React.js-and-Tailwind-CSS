@@ -1,0 +1,15 @@
+[
+    {
+      "id": "1",
+      "title": "First Blog Post",
+      "url": "/1st post",
+      "content": "This is the first line of the first blog post.\nHere is the second line of the first blog post."
+   
+    },
+    {
+      "id": "2",
+      "title": "Second Blog Post",
+      "url": "/second-blog-post",
+      "content": "This is the content of the second blog post."
+    }
+  ]

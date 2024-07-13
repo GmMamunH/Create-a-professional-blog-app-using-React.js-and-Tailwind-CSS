@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Tech News Blog Post",
+    "url": "tech-news-blog-post",
+    "content": "This is the content of the tech news blog post.",
+    "category": "Tech"
+  },
+  {
+    "id": "2",
+    "title": "Lifestyle Blog Post",
+    "url": "lifestyle-blog-post",
+    "content": "This is the content of the Lifestyle blog post.",
+    "category": "Lifestyle"
+  },
+  {
+    "id": "3",
+    "title": "Mobile Blog Post",
+    "url": "Mobile-blog-post",
+    "content": "This is the content of the Mobile blog post.",
+    "category": "Mobile"
+  },
+  {
+    "id": "4",
+    "title": "Laptop Blog Post",
+    "url": "Laptop-blog-post",
+    "content": "This is the content of the Laptop blog post.",
+    "category": "Laptop"
+  }
+]

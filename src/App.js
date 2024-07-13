@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import PostList from './components/PostList';
+import PostDetail from './components/PostDetail';
 
-function App() {
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => setPosts(data));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<PostList posts={posts} />} />
+        <Route path="/category/:category" element={<PostList posts={posts} />} />
+        <Route path="/post/:url" element={<PostDetail posts={posts} />} />
+      </Routes>
+    </Router>
   );
 }
 
