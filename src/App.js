@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import PostList from './components/PostList';
 import PostDetail from './components/PostDetail';
+import Footer from './components/Footer';
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/category/:category" element={<PostList posts={posts} />} />
         <Route path="/post/:url" element={<PostDetail posts={posts} />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
